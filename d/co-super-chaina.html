@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>CO SUPER CHAINA | Narayana</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f8ff;
+color:#222;
+overflow-x:hidden;
+-webkit-text-size-adjust:100%;
+text-size-adjust:100%;
+}
+
+/* NAVBAR */
+nav{
+background:#003366;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-size:30px;
+font-weight:800;
+color:#ffd700;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+/* HERO */
+.hero{
+height:90vh;
+min-height:400px;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url("https://images.uniapply.com/uploads/college/image/500/3613/Narayana_PU_College-_Nagarabhavi_Branch_6742_Building3_UA_2.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:68px;
+font-weight:800;
+}
+
+.hero p{
+font-size:22px;
+margin-top:20px;
+max-width:900px;
+}
+
+/* SECTION */
+section{
+padding:80px 8%;
+}
+
+.title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.title h2{
+font-size:46px;
+color:#003366;
+}
+
+.title p{
+margin-top:10px;
+font-size:18px;
+color:#666;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+/* CARDS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+transition:.3s;
+border-top:8px solid #003366;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+font-size:30px;
+color:#003366;
+margin-bottom:15px;
+}
+
+.card h4{
+color:#666;
+margin-bottom:20px;
+}
+
+.card ul{
+padding-left:20px;
+line-height:2;
+}
+
+/* HIGHLIGHT */
+.highlight{
+background:linear-gradient(135deg,#003366,#001933);
+color:white;
+padding:70px;
+border-radius:30px;
+}
+
+.highlight h2{
+text-align:center;
+font-size:44px;
+color:#ffd700;
+margin-bottom:40px;
+}
+
+.highlight p{
+font-size:20px;
+line-height:2;
+max-width:1000px;
+margin:auto;
+text-align:center;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+margin-top:40px;
+padding:16px 35px;
+background:#ffd700;
+color:black;
+text-decoration:none;
+font-weight:700;
+border-radius:12px;
+}
+
+/* FOOTER */
+footer{
+background:#001933;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+
+@media(max-width:1024px){
+
+.hero h1{
+font-size:52px;
+}
+
+.title h2{
+font-size:38px;
+}
+
+.highlight{
+padding:50px 40px;
+}
+
+.highlight h2{
+font-size:36px;
+}
+
+.highlight p{
+font-size:18px;
+}
+
+}
+
+@media(max-width:768px){
+
+nav{
+padding:15px 5%;
+}
+
+.logo{
+font-size:24px;
+}
+
+.hero{
+height:auto;
+padding:100px 20px 70px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+section{
+padding:55px 5%;
+}
+
+.title h2{
+font-size:32px;
+}
+
+.title p{
+font-size:16px;
+}
+
+.gallery img{
+height:210px;
+}
+
+.card{
+padding:25px;
+}
+
+.card h3{
+font-size:24px;
+}
+
+.highlight{
+padding:40px 25px;
+}
+
+.highlight h2{
+font-size:30px;
+margin-bottom:25px;
+}
+
+.highlight p{
+font-size:16px;
+}
+
+}
+
+@media(max-width:500px){
+
+.logo{
+font-size:20px;
+}
+
+nav a{
+font-size:13px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+.title h2{
+font-size:26px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.gallery img{
+height:200px;
+}
+
+.highlight{
+padding:30px 18px;
+border-radius:18px;
+}
+
+.highlight h2{
+font-size:22px;
+}
+
+.btn{
+padding:13px 25px;
+font-size:14px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">NARAYANA</div>
+<a href="home2.html">← Back to Home</a>
+</nav>
+
+<section class="hero">
+<div>
+<h1>CO SUPER CHAINA</h1>
+<p>Your Gateway to IIT-JEE Excellence</p>
+</div>
+</section>
+
+<section>
+
+<div class="title">
+<h2>Program Overview</h2>
+<p>
+The CO SUPER CHAINA Program by Narayana is a high-intensity, result-driven academic framework tailored for students aspiring to crack IIT-JEE and other top-tier competitive exams.
+</p>
+</div>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7">
+<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
+<img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6">
+</div>
+
+</section>
+
+<section>
+
+<div class="title">
+<h2>Program Structure</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Phase I</h3>
+<h4>Syllabus Completion (12 Months)</h4>
+<ul>
+<li>Complete Class 11 & 12 syllabus</li>
+<li>Aligned with IIT-JEE standards</li>
+<li>48 Weekly Tests</li>
+<li>12 Cumulative Tests</li>
+<li>Cross-topic mastery</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Phase II</h3>
+<h4>Intensive Revision (14 Weeks)</h4>
+<ul>
+<li>15 Practice Test Modules</li>
+<li>IIT-JEE style papers</li>
+<li>15 CTMs / CTAs / CETs</li>
+<li>Improve speed & accuracy</li>
+<li>Exam readiness boost</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Phase III</h3>
+<h4>Final Sprint (12-14 Weeks)</h4>
+<ul>
+<li>20 GTMs (Phase III)</li>
+<li>20 GTMs (Phase II)</li>
+<li>10 GTAs</li>
+<li>20 Local CETs</li>
+<li>High-impact final revision</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="highlight">
+
+<h2>Why Choose CO SUPER CHAINA?</h2>
+
+<p>
+With a strategic blend of syllabus mastery, continuous evaluation and focused revision,
+the CO SUPER CHAINA Program equips students with the confidence, competence and exam temperament required to excel in IIT-JEE and beyond.
+</p>
+
+<div style="text-align:center;">
+<a href="course.html #contact" class="btn">Enroll Now</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Narayana CO SUPER CHAINA | All Rights Reserved
+</footer>
+
+</body>
+</html>

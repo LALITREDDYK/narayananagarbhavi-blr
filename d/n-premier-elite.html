@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>N-Premier Elite | Narayana</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4fff8;
+color:#222;
+overflow-x:hidden;
+-webkit-text-size-adjust:100%;
+text-size-adjust:100%;
+}
+
+/* NAVBAR */
+nav{
+background:#006633;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-size:30px;
+font-weight:800;
+color:#ffd700;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+/* HERO */
+.hero{
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url("https://images.uniapply.com/uploads/college/image/500/3613/Narayana_PU_College-_Nagarabhavi_Branch_6742_Building3_UA_2.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:68px;
+font-weight:800;
+}
+
+.hero p{
+font-size:24px;
+margin-top:20px;
+max-width:900px;
+}
+
+/* SECTION */
+section{
+padding:80px 8%;
+}
+
+.title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.title h2{
+font-size:46px;
+color:#006633;
+}
+
+.title p{
+font-size:18px;
+color:#666;
+margin-top:10px;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+/* CARDS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+border-top:8px solid #006633;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+font-size:30px;
+color:#006633;
+margin-bottom:15px;
+}
+
+.card h4{
+color:#666;
+margin-bottom:20px;
+}
+
+.card ul{
+padding-left:20px;
+line-height:2;
+}
+
+/* WHY */
+.highlight{
+background:linear-gradient(135deg,#006633,#00331a);
+padding:70px;
+border-radius:30px;
+color:white;
+text-align:center;
+}
+
+.highlight h2{
+color:#ffd700;
+font-size:45px;
+margin-bottom:30px;
+}
+
+.highlight ul{
+max-width:900px;
+margin:auto;
+text-align:left;
+font-size:20px;
+line-height:2;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+margin-top:40px;
+padding:16px 35px;
+background:#ffd700;
+color:black;
+text-decoration:none;
+font-weight:700;
+border-radius:12px;
+}
+
+/* FOOTER */
+footer{
+background:#00331a;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+
+@media(max-width:1024px){
+.hero h1{ font-size:52px; }
+.title h2{ font-size:38px; }
+.why,.highlight{ padding:50px 40px; }
+.why h2,.highlight h2{ font-size:36px; }
+.why ul,.highlight ul,.highlight p{ font-size:18px; }
+}
+@media(max-width:768px){
+nav{ padding:15px 5%; }
+.logo{ font-size:24px; }
+nav a{ font-size:14px; }
+.hero{ height:auto; padding:100px 20px 70px; min-height:400px; }
+.hero h1{ font-size:42px; }
+.hero p{ font-size:18px; }
+section{ padding:55px 5%; }
+.title h2{ font-size:32px; }
+.title p{ font-size:16px; }
+.gallery img{ height:210px; }
+.card{ padding:25px; }
+.card h3{ font-size:24px; }
+.highlight-box{ padding:25px; font-size:16px; }
+.why,.highlight{ padding:40px 25px; border-radius:20px; }
+.why h2,.highlight h2{ font-size:28px; margin-bottom:20px; }
+.why ul,.highlight ul,.highlight p{ font-size:16px; }
+}
+@media(max-width:500px){
+.logo{ font-size:20px; }
+nav a{ font-size:12px; }
+.hero h1{ font-size:28px; }
+.hero p{ font-size:14px; }
+.title h2{ font-size:24px; }
+.grid{ grid-template-columns:1fr; }
+.gallery{ grid-template-columns:1fr; }
+.gallery img{ height:200px; }
+.why,.highlight{ padding:28px 16px; border-radius:16px; }
+.why h2,.highlight h2{ font-size:22px; }
+.btn{ padding:12px 22px; font-size:14px; }
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">NARAYANA</div>
+<a href="home2.html">← Back to Home</a>
+</nav>
+
+<section class="hero">
+<div>
+<h1>N-Premier Elite</h1>
+<p>Exclusive Programme for NEET (UG) Excellence</p>
+</div>
+</section>
+
+<section>
+
+<div class="title">
+<h2>Programme Overview</h2>
+<p>
+A high-performance academic pathway crafted for aspiring doctors aiming to excel in NEET (UG) and Board Examinations.
+</p>
+</div>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1504814532849-cff240bbc503">
+<img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d">
+<img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b">
+</div>
+
+</section>
+
+<section>
+
+<div class="title">
+<h2>Programme Structure</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Phase I</h3>
+<h4>Syllabus Completion (12 Months)</h4>
+<ul>
+<li>Complete Class 11 & 12 syllabus</li>
+<li>Board aligned + NEET focused</li>
+<li>24 Weekly Tests</li>
+<li>12 Cumulative Tests</li>
+<li>12 Unit Tests</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Phase II</h3>
+<h4>Focused Revision (12 Weeks)</h4>
+<ul>
+<li>12 PTMs</li>
+<li>NEET-style section tests</li>
+<li>12 CTMs / CTAs / CETs</li>
+<li>Boost speed & accuracy</li>
+<li>Improve problem-solving</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Phase III</h3>
+<h4>Final Sprint (12–14 Weeks)</h4>
+<ul>
+<li>10 GTMs (Phase III)</li>
+<li>10 GTMs Re-attempt</li>
+<li>10 GTAs</li>
+<li>30 Local CETs</li>
+<li>Full exam simulation</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="highlight">
+
+<h2>Why Choose N-Premier Elite?</h2>
+
+<ul>
+<li>Exclusive batch with personalised academic attention</li>
+<li>Dual focus on NEET excellence and Board excellence</li>
+<li>High-frequency assessments for accuracy and consistency</li>
+<li>Scientific pedagogy backed by Narayana’s 46+ years of expertise</li>
+<li>Precision-driven preparation to maximise NEET UG scores</li>
+</ul>
+
+<a href="home2.html #contact" class="btn">Enroll Now</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Narayana N-Premier Elite | All Rights Reserved
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Results | Narayana Techno Nagarbhavi</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:
+    linear-gradient(135deg,#071B34 55%,orange 180%);
+    color:white;
+    overflow-x:hidden;
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+}
+
+/* ========================= */
+/* SCROLLBAR */
+/* ========================= */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:orange;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header{
+    width:100%;
+    background:rgba(4,16,32,0.95);
+
+    padding:18px 6%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    backdrop-filter:blur(10px);
+}
+
+/* ========================= */
+/* LOGO */
+/* ========================= */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    border:3px solid orange;
+    object-fit:cover;
+}
+
+.logo h2{
+    color:orange;
+    font-size:28px;
+    font-weight:700;
+}
+
+/* ========================= */
+/* NAVIGATION */
+/* ========================= */
+
+nav{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    padding:10px 16px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:orange;
+    color:#071B34;
+}
+
+/* ========================= */
+/* HERO SECTION */
+/* ========================= */
+
+.hero{
+    width:100%;
+    min-height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:140px 20px 90px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+    url('https://www.dpsgs.org/vasundhara/blog/public/assets/images/blog/banner/desktop/1747048593-blog%20result.jpg');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content h1{
+    font-size:72px;
+    color:orange;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    max-width:900px;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* ========================= */
+/* SECTION TITLE */
+/* ========================= */
+
+.section-title{
+    text-align:center;
+    font-size:48px;
+    color:orange;
+    margin:70px 0 35px;
+    font-weight:700;
+}
+
+/* ========================= */
+/* RESULTS SECTION */
+/* ========================= */
+
+.results-section{
+    padding:0 2% 50px;
+}
+
+/* ========================= */
+/* RESULTS GRID */
+/* ========================= */
+
+.results-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+}
+
+/* ========================= */
+/* RESULT IMAGE */
+/* ========================= */
+
+.result-media{
+
+    width:80%;
+    max-width:350px;
+
+    height:334px;
+
+    object-fit:cover;
+
+    transition:0.5s ease;
+
+    cursor:pointer;
+}
+
+/* ========================= */
+/* HOVER EFFECT */
+/* ========================= */
+
+.result-media:hover{
+    transform:scale(1.02);
+    filter:brightness(1.08);
+}
+
+/* ========================= */
+/* SUCCESS NUMBERS */
+/* ========================= */
+
+.stats-section{
+    padding:40px 6% 90px;
+}
+
+/* ========================= */
+/* STATS GRID */
+/* ========================= */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+/* ========================= */
+/* STAT CARD */
+/* ========================= */
+
+.stat-card{
+
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(8px);
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    transition:0.4s ease;
+}
+
+/* ========================= */
+/* HOVER EFFECT */
+/* ========================= */
+
+.stat-card:hover{
+    transform:scale(1.03);
+}
+
+/* ========================= */
+/* NUMBER STYLE */
+/* ========================= */
+
+.stat-card h1{
+    font-size:68px;
+    color:orange;
+    font-weight:700;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+    background:#041020;
+    text-align:center;
+    padding:60px 6%;
+    margin-top:40px;
+}
+
+footer h2{
+    color:orange;
+    margin-bottom:15px;
+    font-size:32px;
+}
+
+footer p{
+    line-height:2;
+    color:#d8d8d8;
+    margin:10px 0;
+}
+
+/* ========================= */
+/* SOCIAL ICONS */
+/* ========================= */
+
+.social-icons{
+    margin-top:25px;
+}
+
+.social-icons a{
+    width:52px;
+    height:52px;
+
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#0B2749;
+
+    border-radius:50%;
+
+    margin:0 10px;
+
+    color:white;
+    text-decoration:none;
+
+    font-size:22px;
+
+    transition:0.4s;
+}
+
+.social-icons a:hover{
+    background:orange;
+    color:#071B34;
+    transform:translateY(-5px);
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:1100px){
+
+    .hero-content h1{
+        font-size:58px;
+    }
+
+    .section-title{
+        font-size:40px;
+    }
+
+    .stat-card h1{
+        font-size:56px;
+    }
+
+}
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        padding:15px 4%;
+    }
+
+    .logo h2{
+        font-size:22px;
+    }
+
+    .logo img{
+        width:48px;
+        height:48px;
+    }
+
+    nav{
+        justify-content:center;
+        gap:8px;
+    }
+
+    nav a{
+        padding:8px 12px;
+        font-size:14px;
+    }
+
+    .hero-content h1{
+        font-size:48px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .section-title{
+        font-size:36px;
+        margin:50px 0 28px;
+    }
+
+    .stat-card h1{
+        font-size:52px;
+    }
+
+    .stat-card{
+        padding:40px 15px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero{
+        padding:150px 16px 80px;
+        min-height:45vh;
+    }
+
+    .hero-content h1{
+        font-size:34px;
+        margin-bottom:14px;
+    }
+
+    .hero-content p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .section-title{
+        font-size:26px;
+        margin:35px 0 20px;
+    }
+
+    .results-section{
+        padding:0 2% 30px;
+    }
+
+    .result-media{
+        width:95%;
+        max-width:100%;
+        height:auto;
+        aspect-ratio:3/4;
+    }
+
+    .stats-section{
+        padding:30px 4% 60px;
+    }
+
+    .stat-card h1{
+        font-size:44px;
+    }
+
+    .stat-card p{
+        font-size:14px;
+    }
+
+    footer{
+        padding:40px 4%;
+    }
+
+    footer h2{
+        font-size:22px;
+    }
+
+    footer p{
+        font-size:13px;
+    }
+
+    .social-icons a{
+        width:44px;
+        height:44px;
+        font-size:18px;
+        margin:0 6px;
+    }
+
+}
+
+@media(max-width:400px){
+
+    .logo h2{
+        font-size:18px;
+    }
+
+    nav a{
+        padding:7px 9px;
+        font-size:12px;
+    }
+
+    .hero-content h1{
+        font-size:26px;
+    }
+
+    .section-title{
+        font-size:22px;
+    }
+
+    .stat-card h1{
+        font-size:38px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+
+<img src="logo.png" alt="Logo">
+
+<h2>NARAYANA</h2>
+
+</div>
+
+<nav>
+
+<a href="home2.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="course.html">Curriculum</a>
+<a href="gallery.html">Photos</a>
+<a href="results.html">Results</a>
+<a href="home2.html #contact">Contact Us</a>
+
+</nav>
+
+</header>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Our Results</h1>
+
+<p>
+Celebrating excellence and academic success in
+JEE Main, JEE Advanced, NEET, KCET and Board Examinations.
+</p>
+
+</div>
+
+</section>
+
+<!-- RESULTS GALLERY -->
+
+<section class="results-section">
+
+<h1 class="section-title">Achievements</h1>
+
+<div class="results-grid">
+
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s1.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s2.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s3.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s4.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s5.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s6.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s7.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s8.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s9.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s10.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s11.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s12.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s13.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s14.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s15.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s16.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s17.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s18.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s19.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s20.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s21.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s22.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s23.jpeg" class="result-media">
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\r\s24.jpeg" class="result-media">
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>NARANAYA<br>PU +2(CBSE) COLLEGE AND CO-SCHOOL<br>NAGARBHAVI</h2>
+
+<p>
+Address : No 111-112/D, Hanuamaiah Road,
+Kengeri Main Road, Nearby Mariyappana Palya Bus Stop,
+Naagarabhaavi, Bengaluru, Karnataka - 560056
+</p>
+
+<p>
+Open at 8:00 AM | Closes at 6:00 PM
+</p>
+
+<p>
+Call for more information : 18001023344
+</p>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-google"></i></a>
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="home2.html #contact"><i class="fab fa-whatsapp"></i></a>
+
+</div>
+
+</footer>
+
+</body>
+</html>
