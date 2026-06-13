@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Courses | Narayana Techno Nagarbhavi</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#071B34;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header{
+    width:100%;
+    background:#041020;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    border:3px solid orange;
+}
+
+.logo h2{
+    color:orange;
+    font-size:28px;
+}
+
+nav{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    padding:10px 16px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:orange;
+    color:#071B34;
+}
+
+/* ========================= */
+/* HERO SECTION */
+/* ========================= */
+
+.hero{
+    width:100%;
+    height:85vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+    url('photo1.jpg');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content h1{
+    font-size:60px;
+    color:orange;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    max-width:950px;
+    line-height:1.9;
+    font-size:18px;
+}
+
+/* ========================= */
+/* SECTION TITLE */
+/* ========================= */
+
+.section-title{
+    text-align:center;
+    color:orange;
+    font-size:45px;
+    margin:80px 0 50px;
+    position:relative;
+}
+
+.section-title::after{
+    content:'';
+    width:120px;
+    height:4px;
+    background:orange;
+    position:absolute;
+    bottom:-15px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* ========================= */
+/* COURSE GRID */
+/* ========================= */
+
+.course-container{
+    padding:0 6% 80px;
+}
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+/* ========================= */
+/* COURSE CARD */
+/* ========================= */
+
+.course-card{
+    background:#0B2749;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.35);
+    position:relative;
+}
+
+.course-card:hover{
+    transform:translateY(-12px);
+}
+
+.course-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.course-content{
+    padding:30px;
+}
+
+.course-content h2{
+    color:orange;
+    margin-bottom:18px;
+    font-size:28px;
+}
+
+.course-content p{
+    line-height:1.9;
+    color:#d8d8d8;
+    margin-bottom:25px;
+}
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.read-btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:orange;
+    color:#071B34;
+    text-decoration:none;
+    border-radius:35px;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.read-btn:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+    background:#041020;
+    text-align:center;
+    padding:50px 6%;
+}
+
+footer h2{
+    color:orange;
+    margin-bottom:15px;
+    font-size:32px;
+}
+
+footer p{
+    line-height:2;
+    color:#d8d8d8;
+    margin:10px 0;
+}
+
+.social-icons{
+    margin-top:25px;
+}
+
+.social-icons a{
+    width:50px;
+    height:50px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    background:#0B2749;
+    border-radius:50%;
+    margin:0 10px;
+    color:white;
+    text-decoration:none;
+    font-size:22px;
+    transition:0.4s;
+}
+
+.social-icons a:hover{
+    background:orange;
+    color:#071B34;
+    transform:translateY(-5px);
+}
+
+/* ========================= */
+/* HAMBURGER MENU */
+/* ========================= */
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:2px solid orange;
+    color:orange;
+    font-size:22px;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.menu-toggle:hover{
+    background:orange;
+    color:#071B34;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:900px){
+
+    header{
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav{
+        width:100%;
+        display:none;
+        flex-direction:column;
+        align-items:center;
+        gap:8px;
+        padding:10px 0;
+    }
+
+    nav.open{
+        display:flex;
+    }
+
+    nav a{
+        display:block;
+        text-align:center;
+        width:100%;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    header{
+        padding:12px 5%;
+    }
+
+    .logo h2{
+        font-size:20px;
+    }
+
+    .logo img{
+        width:44px;
+        height:44px;
+    }
+
+    .section-title{
+        font-size:28px;
+        margin:60px 0 40px;
+    }
+
+    .hero{
+        height:auto;
+        padding:80px 5% 60px;
+        background-color:#071B34;
+    }
+
+    .hero-content h1{
+        font-size:30px;
+    }
+
+    .hero-content p{
+        font-size:14px;
+    }
+
+    .course-container{
+        padding:0 5% 60px;
+    }
+
+    .course-grid{
+        grid-template-columns:1fr;
+    }
+
+    .course-content h2{
+        font-size:22px;
+    }
+
+    footer{
+        padding:40px 5%;
+    }
+
+    footer h2{
+        font-size:24px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+<img src="logo.png" alt="Logo">
+<h2>NARAYANA</h2>
+</div>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+<i class="fas fa-bars"></i>
+</button>
+
+<nav id="mainNav">
+<a href="home2.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="course.html">Curriculum</a>
+<a href="gallery.html">Photos</a>
+<a href="results.html">Results</a>
+<a href="home2.html#contact">Contact Us</a>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Curriculum</h1>
+
+<p>
+Narayana Techno Nagarbhavi provides specialized integrated coaching programs
+for JEE Main, JEE Advanced, and NEET aspirants with structured learning,
+concept mastery, advanced practice,expert mentorship,etc with many joyfull events like Fresher's Day Party,Sports Day,Children's Day Celebration.
+</p>
+
+</div>
+
+</section>
+
+<!-- JEE COURSES -->
+
+<h1 class="section-title">JEE Main & JEE Advanced</h1>
+
+<section class="course-container">
+
+<div class="course-grid">
+
+<!-- COURSE 1 -->
+
+<div class="course-card">
+
+<img src="c_r/d/c/e3.png" alt="STAR CO Super Chaina">
+<div class="course-content">
+
+<h2>STAR CO Super Chaina</h2>
+
+<p>
+A meticulously structured, three-phase programme that builds conceptual mastery,
+encourages intensive practice, and ensures targeted revision for top JEE ranks.
+</p>
+
+<a href="STARCOSuperChaina.html" class="read-btn">Read More</a>
+
+</div>
+
+</div>
+
+<!-- COURSE 2 -->
+
+<div class="course-card">
+
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\c\e4.png" alt="CO Super Chaina">
+
+<div class="course-content">
+
+<h2>CO SUPER CHAINA</h2>
+
+<p>
+A long-term foundation-to-advanced pathway integrating consistent evaluation,
+deep concept-building and personalised support for engineering aspirants.
+</p>
+
+<a href="co-super-chaina.html" class="read-btn">Read More</a>
+
+</div>
+
+</div>
+
+<!-- COURSE 3 -->
+
+<div class="course-card">
+
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\c\e5.png" alt="CO SPARK">
+
+<div class="course-content">
+
+<h2>CO SPARK</h2>
+
+<p>
+An intensive, multi-year integrated course combining board preparation with
+focussed JEE Main and Advanced coaching supported by expert mentoring.
+</p>
+
+<a href="co-spark.html" class="read-btn">Read More</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- NEET COURSES -->
+
+<h1 class="section-title">NEET Courses</h1>
+
+<section class="course-container">
+
+<div class="course-grid">
+
+<!-- COURSE 4 -->
+
+<div class="course-card">
+
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\c\e1.png" alt="N-Premier Elite">
+
+<div class="course-content">
+
+<h2>N-Premier Elite</h2>
+
+<p>
+The N-Premier Elite Programme by Narayana is an exclusive,
+high-performance academic pathway crafted for a select group of aspiring doctors.
+</p>
+
+<a href="n-premier-elite.html" class="read-btn">Read More</a>
+
+</div>
+
+</div>
+
+<!-- COURSE 5 -->
+
+<div class="course-card">
+
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\c\e2.png" alt="N-40">
+
+<div class="course-content">
+
+<h2>N-40</h2>
+
+<p>
+The N-40 Programme by Narayana is a focused, high-precision academic system
+designed exclusively for students aiming to secure top NEET ranks.
+</p>
+
+<a href="n40.html" class="read-btn">Read More</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- JEE COURSES -->
+
+<h1 class="section-title">Events</h1>
+
+<section class="course-container">
+
+<div class="course-grid">
+
+<!-- COURSE 1 -->
+
+<div class="course-card">
+
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\c\gb3.jpg" alt="Fresher's Day Party">
+
+<div class="course-content">
+
+<h2>Fresher's Day Party</h2>
+
+<p>
+A Freshers' Day event can be described as a vibrant, highly anticipated celebration that officially welcomes new students to a campus.
+</p>
+
+</div>
+
+</div>
+
+<!-- COURSE 2 -->
+
+<div class="course-card">
+
+<img src="C:\Users\Dell\Desktop\html-css-course\New folder (2)\c_r\c\gc2.jpeg" alt="Sports Day">
+
+<div class="course-content">
+
+<h2>Sports Day</h2>
+
+<p>
+A sports day event is best described as an energetic and vibrant celebration of athletics, teamwork, and healthy competition. It transforms ordinary fields into festive arenas buzzing with cheers, featuring a mix of traditional track-and-field events, novelty games, and community spirit.
+</p>
+
+</div>
+
+</div>
+
+<!-- COURSE 3 -->
+
+<div class="course-card">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJqYRl32IpYE6-UANIrRGe_fxdC0SAf8wrNQ&s">
+
+<div class="course-content">
+
+<h2>Children's day</h2>
+
+<p>
+Children's Day is usually celebrated by playing activities like games and storytelling. The purpose is both to entertain the kids and inspire them, leaving lasting memories.
+</p>
+
+
+</div>
+
+</div>
+
+<!-- COURSE 4-->
+
+<div class="course-card">
+
+<img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1200">
+
+<div class="course-content">
+
+<h2>And Many More</h2>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>NARANAYA<br>PU +2(CBSE) COLLEGE AND CO-SCHOOL<br>NAGARBHAVI</h2>
+
+<p>
+Address : No 111-112/D, Hanuamaiah Road, Kengeri Main Road,
+Nearby Mariyappana Palya Bus Stop, Naagarabhaavi,
+Bengaluru, Karnataka - 560056
+</p>
+
+<p>
+Open at 8:00 AM | Closes at 6:00 PM
+</p>
+
+<p>
+Call for more information : 18001023344
+</p>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-google"></i></a>
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+
+</div>
+
+</footer>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
+
+menuToggle.addEventListener('click', function(){
+    mainNav.classList.toggle('open');
+    const icon = menuToggle.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-times');
+});
+
+mainNav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+        mainNav.classList.remove('open');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-times');
+    });
+});
+</script>
+
+</body>
+</html>
