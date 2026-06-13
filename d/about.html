@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | Narayana Techno Nagarbhavi</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#071B34;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:orange;
+    border-radius:20px;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    background:#041020;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 20px rgba(0,0,0,0.4);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    border:3px solid orange;
+    object-fit:cover;
+}
+
+.logo h2{
+    color:orange;
+    font-size:28px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:18px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    padding:10px 16px;
+    border-radius:8px;
+    transition:0.4s;
+}
+
+nav ul li a:hover{
+    background:orange;
+    color:#071B34;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    height:85vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url('https://d3bat55ebwjhsf.cloudfront.net/schools/cover/8482/user_tech.generated.8482%40ezyschooling.com/unnamed_-_2026-05-25T163909.038.webp');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:65px;
+    color:orange;
+}
+
+.hero p{
+    margin-top:20px;
+    max-width:1000px;
+    line-height:1.9;
+    font-size:18px;
+}
+
+/* GENERAL */
+
+section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:45px;
+    color:orange;
+    margin-bottom:60px;
+    position:relative;
+}
+
+.section-title::after{
+    content:'';
+    width:120px;
+    height:4px;
+    background:orange;
+    position:absolute;
+    bottom:-15px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* MANAGEMENT */
+
+.management-card{
+    background:#0B2749;
+    border-radius:20px;
+    padding:35px;
+    display:grid;
+    grid-template-columns:300px 1fr;
+    gap:40px;
+    margin-bottom:40px;
+    align-items:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.management-card img{
+    width:100%;
+    border-radius:20px;
+    border:4px solid orange;
+}
+
+.management-content h2{
+    color:orange;
+    margin-bottom:10px;
+    font-size:35px;
+}
+
+.management-content h3{
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.management-content p{
+    line-height:2;
+    color:#d8d8d8;
+}
+
+/* DEPARTMENTS */
+
+.department{
+    margin-bottom:70px;
+}
+
+.department h2{
+    color:orange;
+    margin-bottom:35px;
+    font-size:35px;
+    text-align:center;
+}
+
+.staff-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.staff-card{
+    background:#0B2749;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+.staff-card:hover{
+    transform:translateY(-10px);
+}
+
+.staff-card img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid orange;
+    margin-bottom:20px;
+}
+
+.staff-card h3{
+    color:orange;
+    margin-bottom:10px;
+}
+
+.staff-card p{
+    color:#d8d8d8;
+    line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+    background:#041020;
+    text-align:center;
+    padding:40px 8%;
+}
+
+footer h2{
+    color:orange;
+    margin-bottom:15px;
+}
+
+footer p{
+    line-height:2;
+    color:#d8d8d8;
+}
+
+.social-icons{
+    margin-top:20px;
+}
+
+.social-icons a{
+    width:50px;
+    height:50px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:#0B2749;
+    color:white;
+    border-radius:50%;
+    margin:0 10px;
+    text-decoration:none;
+    transition:0.4s;
+    font-size:20px;
+}
+
+.social-icons a:hover{
+    background:orange;
+    color:#071B34;
+}
+
+/* HAMBURGER MENU */
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:2px solid orange;
+    color:orange;
+    font-size:22px;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.menu-toggle:hover{
+    background:orange;
+    color:#071B34;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    header{
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav{
+        width:100%;
+        display:none;
+    }
+
+    nav.open{
+        display:block;
+    }
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+        gap:8px;
+        padding:10px 0;
+    }
+
+    nav ul li a{
+        display:block;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .management-card{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+}
+
+@media(max-width:600px){
+
+    header{
+        padding:12px 5%;
+    }
+
+    .logo h2{
+        font-size:20px;
+    }
+
+    .logo img{
+        width:48px;
+        height:48px;
+    }
+
+    .hero{
+        height:auto;
+        padding:80px 5% 60px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .section-title{
+        font-size:28px;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+
+    .management-card{
+        padding:25px;
+    }
+
+    .management-content h2{
+        font-size:26px;
+    }
+
+    .management-content h3{
+        font-size:18px;
+    }
+
+    .staff-grid{
+        grid-template-columns:1fr 1fr;
+        gap:20px;
+    }
+
+    .staff-card img{
+        width:110px;
+        height:110px;
+    }
+
+    .department h2{
+        font-size:26px;
+    }
+
+}
+
+@media(max-width:400px){
+
+    .staff-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+<img src="logo.png" alt="Logo">
+<h2>NARAYANA</h2>
+</div>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+<i class="fas fa-bars"></i>
+</button>
+
+<nav id="mainNav">
+<ul>
+<li><a href="home2.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="course.html">Curriculum</a></li>
+<li><a href="gallery.html">Photos</a></li>
+<li><a href="results.html">Results</a></li>
+<li><a href="home2.html#contact">Contact Us</a></li>
+</ul>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<h1>About NARANAYA<br>NAGARBHAVI</h1>
+
+<p>
+Welcome to Narayana Techno Nagarbhavi, a premier educational institution dedicated to shaping the future of students through academic excellence and competitive exam preparation. We provide integrated coaching for KCET, JEE Main, JEE Advanced, NEET, and PU Board examinations, helping students build strong concepts, confidence, and problem-solving skills.
+<br><br>
+Our experienced faculty members use structured teaching methods, regular assessments, doubt-clearing sessions, and personalized guidance to ensure every student reaches their highest potential. With modern classrooms, disciplined learning environments, and student-focused mentoring, we aim to create future engineers, doctors, and achievers.
+</p>
+
+</div>
+
+</section>
+
+<!-- MANAGEMENT -->
+
+<section>
+
+<h1 class="section-title">Leadership</h1>
+
+<!-- AGM -->
+
+<div class="management-card">
+
+<img src="narayananagarbhavi-blr/a/agm.png" alt="AGM Photo">
+
+<div class="management-content">
+
+<h2>AGM</h2>
+
+<h3>Shri.Basha Shaik</h3>
+
+<p>
+Our AGM brings years of academic leadership and institutional management experience to Narayana Techno Nagarbhavi. With a strong vision of creating future achievers, he continuously focuses on academic innovation, student discipline, and holistic development. His leadership encourages both faculty and students to strive for excellence in competitive exams and board results. He believes in combining conceptual learning with practical application and consistent evaluation. His mission is to build an educational ecosystem that nurtures confidence, responsibility, and success among students. Under his guidance, the institution continues to grow as a trusted center for quality education.
+</p>
+
+</div>
+
+</div>
+
+<!-- PRINCIPAL -->
+
+<div class="management-card">
+
+<img src="narayananagarbhavi-blr/a/p.png" alt="Principal Photo">
+
+<div class="management-content">
+
+<h2>Principal</h2>
+
+<h3>S S M Ram Prasad</h3>
+
+<p>
+The Principal of Narayana Techno Nagarbhavi is committed to academic excellence and student-centered education. With extensive teaching and administrative experience, the principal ensures smooth academic operations and quality learning standards. The focus is on maintaining discipline, motivating students, and encouraging innovation in teaching practices. Through strategic planning and mentorship, students receive the guidance required to excel in both board and competitive examinations. The principal’s vision is to empower students with knowledge, ethics, confidence, and leadership qualities for a brighter future.
+</p>
+
+</div>
+
+</div>
+
+<!-- Reginal Incharge -->
+
+<div class="management-card">
+
+<img src="narayananagarbhavi-blr/a/vp5.png" alt="Vice Principal">
+
+<div class="management-content">
+
+<h2>R.I</h2>
+
+<h3>J Vikram Reddy</h3>
+
+<p>The Regional In-Charge plays a vital role in the growth and success of our institution. Through his strong leadership, guidance, and dedication, he ensures that all activities run smoothly and efficiently. He supports both staff and students, encourages excellence, and helps overcome challenges with effective solutions. Behind every successful institution stands dedicated leaders. Proud to have our Regional Incharge, who is playing vital role in admissions, Guiding students & strengthening our Non-Academic success.</p>
+
+</div>
+
+</div>
+
+<!-- VICE PRINCIPAL -->
+
+<div class="management-card">
+
+<img src="narayananagarbhavi-blr/a/vp1.png" alt="Vice Principal">
+
+<div class="management-content">
+
+<h2>Vice Principal</h2>
+
+<h3>Manoj Kumar P</h3>
+
+<p>
+The Vice Principal plays a key role in strengthening the academic and disciplinary standards of the institution. With years of educational experience and dedication, the vice principal supports students in achieving excellence through personalized mentoring and guidance. The emphasis is on academic consistency, student welfare, and effective communication between teachers and parents. Through leadership and teamwork, the institution maintains a productive learning environment that inspires students to achieve their dreams and career aspirations.
+</p>
+
+</div>
+
+</div>
+
+<!-- VICE PRINCIPAL -->
+
+<div class="management-card">
+
+<img src="narayananagarbhavi-blr/a/vp2.png" alt="Vice Principal">
+
+<div class="management-content">
+
+<h2>Vice Principal</h2>
+
+<h3>Soumya PV</h3>
+
+<p>
+The Vice Principal is dedicated to nurturing academic excellence and supporting students through every stage of their educational journey. With a vision to develop confident and successful learners, the vice principal focuses on discipline, consistency, and motivation. Through effective planning, mentorship, and academic monitoring, students are encouraged to perform their best in academics and competitive examinations. The institution’s growth and success are strengthened through continuous innovation, teamwork, and student-focused leadership.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- staff -->
+
+<div class="management-card">
+
+<img src="narayananagarbhavi-blr/a/vp3.png" alt="Vice Principal">
+
+<div class="management-content">
+
+<h2>Staff</h2>
+
+<p>
+The staff at Narayana PU College are dedicated professionals committed to academic excellence and student success. With experienced faculty members, subject experts, and supportive mentors, they focus on concept-based learning, personalized guidance, and regular performance monitoring. The teaching team strives to create a disciplined and motivating environment that helps students excel in board and competitive examinations. Their commitment to continuous improvement and student development contributes significantly to the institution’s educational standards
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- aim -->
+
+<div class="management-card">
+
+<img src="narayananagarbhavi-blr/a/vp4.png" alt="Vice Principal">
+
+<div class="management-content">
+
+<h2>Aim</h2>
+
+<p>
+The aim of Narayana Educational Institutions and its PU colleges is to provide quality education, build strong academic foundations, and help students excel in board examinations as well as competitive exams like NEET, JEE, and KCET. The institution focuses on disciplined learning, conceptual understanding, career-oriented training, and the overall development of students to prepare them for higher education and future success.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>NARANAYA<br>PU +2(CBSE) COLLEGE AND CO-SCHOOL<br>NAGARBHAVI</h2>
+<p>
+Dedicated to academic excellence, competitive success, and holistic student development.
+</p>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-google"></i></a>
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+
+</div>
+
+</footer>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
+
+menuToggle.addEventListener('click', function(){
+    mainNav.classList.toggle('open');
+    const icon = menuToggle.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-times');
+});
+
+mainNav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+        mainNav.classList.remove('open');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-times');
+    });
+});
+</script>
+
+</body>
+</html>

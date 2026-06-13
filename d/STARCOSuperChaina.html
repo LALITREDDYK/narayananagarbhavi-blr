@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>STAR CO Super Chaina | Narayana</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f8ff;
+color:#222;
+overflow-x:hidden;
+-webkit-text-size-adjust:100%;
+text-size-adjust:100%;
+}
+
+/* NAVBAR */
+nav{
+background:#003366;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#ffd700;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+/* HERO */
+.hero{
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("https://images.uniapply.com/uploads/college/image/500/3613/Narayana_PU_College-_Nagarabhavi_Branch_6742_Building3_UA_2.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:65px;
+font-weight:800;
+}
+
+.hero p{
+font-size:22px;
+margin-top:20px;
+max-width:900px;
+}
+
+/* GENERAL */
+section{
+padding:80px 8%;
+}
+
+.title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.title h2{
+font-size:45px;
+color:#003366;
+}
+
+.title p{
+font-size:18px;
+color:#666;
+margin-top:10px;
+}
+
+/* CARDS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+color:#003366;
+font-size:28px;
+margin-bottom:20px;
+}
+
+.card ul{
+line-height:2;
+padding-left:20px;
+}
+
+/* PHOTOS */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+/* WHY */
+.why{
+background:linear-gradient(135deg,#003366,#001933);
+color:white;
+border-radius:30px;
+padding:60px;
+}
+
+.why h2{
+text-align:center;
+margin-bottom:40px;
+font-size:42px;
+color:#ffd700;
+}
+
+.why ul{
+font-size:20px;
+line-height:2.2;
+max-width:900px;
+margin:auto;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+background:#ffd700;
+color:black;
+padding:15px 30px;
+text-decoration:none;
+border-radius:10px;
+font-weight:700;
+margin-top:30px;
+}
+
+/* FOOTER */
+footer{
+background:#001933;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+
+@media(max-width:1024px){
+.hero h1{ font-size:52px; }
+.title h2{ font-size:38px; }
+.why,.highlight{ padding:50px 40px; }
+.why h2,.highlight h2{ font-size:36px; }
+.why ul,.highlight ul,.highlight p{ font-size:18px; }
+}
+@media(max-width:768px){
+nav{ padding:15px 5%; }
+.logo{ font-size:24px; }
+nav a{ font-size:14px; }
+.hero{ height:auto; padding:100px 20px 70px; min-height:400px; }
+.hero h1{ font-size:42px; }
+.hero p{ font-size:18px; }
+section{ padding:55px 5%; }
+.title h2{ font-size:32px; }
+.title p{ font-size:16px; }
+.gallery img{ height:210px; }
+.card{ padding:25px; }
+.card h3{ font-size:24px; }
+.highlight-box{ padding:25px; font-size:16px; }
+.why,.highlight{ padding:40px 25px; border-radius:20px; }
+.why h2,.highlight h2{ font-size:28px; margin-bottom:20px; }
+.why ul,.highlight ul,.highlight p{ font-size:16px; }
+}
+@media(max-width:500px){
+.logo{ font-size:20px; }
+nav a{ font-size:12px; }
+.hero h1{ font-size:28px; }
+.hero p{ font-size:14px; }
+.title h2{ font-size:24px; }
+.grid{ grid-template-columns:1fr; }
+.gallery{ grid-template-columns:1fr; }
+.gallery img{ height:200px; }
+.why,.highlight{ padding:28px 16px; border-radius:16px; }
+.why h2,.highlight h2{ font-size:22px; }
+.btn{ padding:12px 22px; font-size:14px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">NARAYANA</div>
+<a href="home2.html">← Back to Home</a>
+</nav>
+
+<section class="hero">
+<div>
+<h1>STAR CO Super Chaina</h1>
+<p>
+Your Gateway to IIT-JEE Success
+</p>
+</div>
+</section>
+
+<section>
+<div class="title">
+<h2>Program Overview</h2>
+<p>
+A meticulously crafted, result-oriented academic journey designed to empower students aiming for top ranks in IIT-JEE and other competitive exams.
+</p>
+</div>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7">
+<img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6">
+</div>
+</section>
+
+<section>
+
+<div class="title">
+<h2>Program Structure</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Phase I</h3>
+<h4>Syllabus Completion (14 Months)</h4>
+<ul>
+<li>Integrated Class 11 & 12 Curriculum</li>
+<li>56 Weekly Tests</li>
+<li>56 Cumulative Tests</li>
+<li>Strong fundamentals</li>
+<li>Analytical thinking development</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Phase II</h3>
+<h4>Intensive Revision (5 Months)</h4>
+<ul>
+<li>21 PTA Tests</li>
+<li>21 CTA/GTA Tests</li>
+<li>21 JEE Main PTM Tests</li>
+<li>Structured revision plan</li>
+<li>Concept reinforcement</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Phase III</h3>
+<h4>Final Boost (3 Months)</h4>
+<ul>
+<li>20 GTM Tests Phase III</li>
+<li>20 GTM Tests Phase II</li>
+<li>20 GTA Tests</li>
+<li>10 Local CETs</li>
+<li>Real exam simulation</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="why">
+
+<h2>Why Choose STAR CO Super Chaina?</h2>
+
+<ul>
+<li>Proven pedagogy backed by Narayana’s legacy of excellence</li>
+<li>Regular assessments to build exam temperament</li>
+<li>Personalized mentoring and performance analytics</li>
+<li>Maximizes scores in JEE Main, JEE Advanced and CETs</li>
+<li>Structured roadmap for top rank achievement</li>
+</ul>
+
+<div style="text-align:center;">
+<a href="home2.html #contact" class="btn">Apply Now</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Narayana STAR CO Super Chaina | All Rights Reserved
+</footer>
+
+</body>
+</html>
